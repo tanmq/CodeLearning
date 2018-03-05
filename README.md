@@ -7,3 +7,4 @@
 4. springWeb: [spring filter实现原理](http://blog.csdn.net/u012410733/article/details/51746178)
 5. java线程池异步: [Future与FutureTask](http://www.cnblogs.com/dolphin0520/p/3949310.html)
 6. 动态代理:[java动态代理例子](http://www.cnblogs.com/hapjin/p/4727903.html)
+7. 高性能队列:[Disruptor](https://tech.meituan.com/disruptor.html)
