@@ -4,7 +4,7 @@
 1. exit会调用终止处理函数和做io清理工作，缓存中的所有数据都会刷到盘中，然后再进入内核；_exit和_Exit直接进入内核，缓存中的数据可能丢失。
 2. atexit函数可以注册终止处理函数，这些函数将由exit函数调用，调用顺序和登记顺序相反。
 3. 内核使程序执行的唯一方法是调用exec函数。
-4. 每个程序都会接收到一张环境表（字符指针数组），extern char **environ;(environ为全局变量)。
+4. 每个程序都会接收到一张环境表（字符指针数组），extern char **environ;(environ为全局变量)；获取环境参数也可以通过getenv函数。
 5. malloc申请空间不初始化，calloc申请对象空间并且初始化为0；底层都是调用的sbrk(2)系统调用。
 6. setjump和longjump可以在深度调用栈中直接返回到上层，而不是每一层处理return。
 7. 每个进程资源都有限制，可以通过getrlimit和setrlimit设置和获取。
